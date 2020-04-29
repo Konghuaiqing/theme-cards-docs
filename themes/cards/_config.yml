@@ -1,0 +1,292 @@
+cdn: 
+  enable: true
+  css: 
+    style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/css/style.min.css
+    highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/css/github.min.css
+    fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
+  js: 
+    lazyload: https://cdn.jsdelivr.net/npm/vanilla-lazyload@latest/dist/lazyload.min.js
+    back_to_top: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/js/b2t.min.js
+    valine: https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js
+    wildfire: https://cdn.jsdelivr.net/npm/wildfire@latest/dist/wildfire.auto.js
+    busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
+    jquery: https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js
+    fancybox: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js
+
+
+
+
+# 自定义信息
+head: 
+  
+  # 网站图标
+  favicon: /favicon.ico
+  
+  # 社交分享链接
+  opengraph: 
+    enable: true
+    tc_type: summary_large_image
+
+  # 自定义 head
+  custom_head: 
+    - ''
+    - ''
+
+# 封面 cover 设置
+cover: 
+
+  # 显示在最上方 cover 处的站点名称
+  sitename: Demo
+
+  # 若设置 logo，则优先使用 logo 代替 sitename
+  logo: 
+  
+  # logo 下方的一句话介绍
+  description: Hi, nice to meet you!
+  
+  # cover 按钮菜单，通常用于站内导航
+  menu: 
+    - name: 首页
+      url: /demo/
+    - name: 标签
+      url: /demo/tags/
+    - name: 归档
+      url: /demo/archives/
+    - name: 友链
+      url: /demo/links/
+    - name: Page
+      url: /demo/page/
+
+
+
+style: 
+
+  # 盒子大小
+  box: 
+    max_width: 800px
+    sp_width: 1540px 
+    max_width_logo: 600px 
+    link_item: 16rem
+
+  # 颜色配置
+  color: 
+    main_color: '#ffb90f'
+    link_color: '#ffb90f'
+    link_color_hover: '#eb5757'
+    title: '#50596c'
+    background: '#f4f4f4'
+    card_color: '#fff'
+    font_color: '#444'
+    codeblock: '#f8f8f8'
+    categories_block: '#c2c2c2'
+    tags_block: '#f4f4f4'
+    footer_text: '#999'
+    footer_link: '#6b6b6b'
+  
+  # 弧度设置
+  radius: 
+    main: 5px
+    button: 5px
+    
+  # 间距设置
+  space: 
+    main: 3.5rem
+    s_main: 2rem  # 当屏幕宽度小于 700px 时候启用
+    sm_main: 1rem  # 当屏幕宽度小于 450px 时候启用
+
+  # 字体设置
+  font: 
+    base_fontsize: 16px
+    line_height: '1.8'  
+
+
+
+meta:
+  # 默认文章标题
+  title: 'no title'
+  
+  # 默认文章作者（可在front-matter中覆盖）
+  author:
+    name: ChrAlpha
+    url: https://chralpha.com
+  
+  # 文章创建日期
+  date:
+    title: ''
+    format: 'YYYY-MM-DD' # 日期格式 http://momentjs.com/docs/
+  
+  # 文章更新日期
+  updated:
+    title: '最后更新于：'
+    format: 'YYYY-MM-DD' # 日期格式 http://momentjs.com/docs/
+
+  copyright: 
+    enable: true
+    
+    # 永久链接前的描述
+    permalink: '本文链接：'
+    
+    # 在作者声明和永久链接之间，可以多行，支持 markdown
+    custom_text:
+      - '文章默认使用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 协议进行许可，使用时请注意遵守协议。'
+  
+  # 网站页脚，支持 markdown
+  footer:
+    - 'Copyright © 2020 '
+    - 'Powered by [Hexo](https://hexo.io) | Theme - [Cards](https://github.com/ChrAlpha/hexo-theme-cards)'
+
+
+
+# 布局设置
+layout: 
+
+  # 首页/归档
+  # title/excerpt/thumbnail/date/updated/categories/tags
+  meta: 
+    - excerpt
+    - thumbnail
+    - date
+    - categories
+    - tags
+
+  # 文章页
+  post: 
+    header:
+      - thumbnail
+      - date
+      - categories
+    footer: 
+      - copyright
+      - updated
+      - tags
+
+
+
+
+optimize: 
+  lazyload:
+    enable: true
+    onlypost: false
+    loadingImg: 
+
+  jquery: 
+    enable: true
+
+  # 如需开启 fancybox 请确保开启上方 jQuery
+  fancybox: 
+    enable: true
+    auto: true
+    
+  # 回到顶部按钮
+  back_to_top: 
+    enable: true
+
+
+# 评论系统
+comments: 
+  enable: 
+
+  ## Disqus
+  disqus: 
+    enable: 
+    shortname: 
+    disqusjs:
+      enable: 
+      siteName: 
+      api: 
+      apikey: 
+      admin: ''
+      nesting: 2
+
+  ## Valine
+  valine:
+    enable: 
+    appId: 
+    appKey: 
+    meta: ['nick', 'mail', 'link']
+    requiredFields: []
+    path: 
+    placeholder: 'just go!'
+    avatar: 
+    pageSize: 
+    lang: 
+    highlight: 
+    recordIP: 
+    emojiCDN: 
+    emojiMaps: {}
+
+  ## Gitalk
+  gitalk:
+    enable:
+    repo:
+    owner:
+    clientID:
+    clientSecret:
+
+  ## Gitment
+  gitment:
+    enable:
+    repo:
+    owner:
+    client_id:
+    client_secret:
+  
+  # Livere 来比力
+  livere:
+    enable: 
+    livere_uid:
+
+  # 畅言
+  changyan:
+    enable: 
+    appid:
+    conf:
+    thread_key_type: path # id | path，单独定义时候用 “id”
+
+  wildfire:
+    enable: 
+    database_provider: firebase # firebase | wilddog
+    wilddog_site_id:
+    firebase_api_key:
+    firebase_auth_domain:
+    firebase_database_url:
+    firebase_project_id:
+    firebase_storage_bucket:
+    firebase_messaging_sender_id:
+    theme: light # light | dark
+    locale: en
+
+
+
+# 统计服务
+analytics:
+  google_site_id:
+  gtags_site_id:
+  baidu_site_id: 
+  cnzz_site_id: 
+
+  # busuanzi 计数系统
+  busuanzi:
+    enable: true
+    
+    # 全站 UV（Unique Viewers）
+    site_uv:
+      enable: false
+      before_text: '' # 展示在数据前的内容，支持 HTML
+      after_text: Viewers  # 展示在数据后的内容，支持 HTML
+      divider: '&nbsp;&nbsp;&nbsp;|' # 分隔符，HTML 语法支持
+    
+    # 全站 PV（Page Views）
+    site_pv:
+      enable: true
+      before_text: ''  # 展示在数据前的内容，支持 HTML
+      after_text: Views  # 展示在数据后的内容，支持 HTML
+      divider: ''  # 分隔符，HTML 语法支持
+    
+    # 页面 PV
+    page_pv:
+      enable: true
+      before_text: ''
+      after_text: Views 
+
+

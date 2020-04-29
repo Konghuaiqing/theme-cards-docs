@@ -1,0 +1,41 @@
+<div class="post-title">
+    <h1 class="post-title__text">
+        <%- page.title %>
+    </h1>
+    <div class="post-meta">
+        <% if (theme.layout.meta.indexOf('date') !== -1) { %>
+            <%- partial('_meta/date') %>
+        <% } %>
+        <% if (theme.layout.post.header.indexOf('categories') !== -1) { %>
+            <%- partial('_meta/categories') %> 
+        <% } %>
+        <%- partial('_third-party/busuanzi', {position: 'page'}) %> 
+    </div>
+</div>
+<div class="post content-box">
+    <div class="post__header">
+        <% if (theme.layout.post.header.indexOf('thumbnail') !== -1) { %>
+            <%- partial('_meta/thumbnail', {post: post, position: 'article'}) %> 
+        <% } %>
+    </div>
+    <div class="post__content">
+        <div class="markdown-body">
+            <%- page.content %>
+        </div>
+    </div>
+    <% if (theme.layout.post.footer.indexOf('copyright') !== -1) { %>
+        <%- partial('_meta/copyright') %> 
+    <% } %>
+    <% if (theme.layout.post.footer.indexOf('updated') !== -1) { %>
+        <%- partial('_meta/updated') %> 
+    <% } %>
+    <% if (theme.layout.post.footer.indexOf('tags') !== -1) { %>
+        <%- partial('_meta/tags') %> 
+    <% } %> 
+</div>
+<br>
+<% if (theme.comments.enable && page.comments !== false) { %>
+    <div class="post__comment content-box">
+        <%- partial('../_third-party/comments.ejs') %>
+    </div>
+<% } %>
