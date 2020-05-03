@@ -1,17 +1,19 @@
+---
 title: links
 date: 2020-04-27 20:20:45
 layout: links
 links: 
   - name: ChrAlpha
-    avatar: https://cdn.jsdelivr.net/npm/chrdnx@1.0.10/img/head-found.png
+    avatar: /demo/assets/avatar/chralpha.png
     url: https://ichr.me
   - name: Theme Docs
-    avatar: /assets/icon/android-chrome-96x96.png
+    avatar: /demo/assets/avatar/theme-cards.png
     url: https://theme-cards.ichr.me
   - name: Theme Demo
-    avatar: /assets/icon/android-chrome-96x96.png
+    avatar: /demo/assets/avatar/theme-cards.png
     url: https://theme-cards.ichr.me/demo
   - name: Theme Source
-    avatar: https://i1.wp.com/github.com/fluidicon.png
+    avatar: /demo/assets/avatar/github.png
     url: https://github.com/ChrAlpha/hexo-theme-cards
+
 ---
